@@ -32,14 +32,17 @@ void main(void) {
 
 	// 소문자 구분
 	int n = 0;
+	printf("소문자 출력");
 	for (int i = 0; i < (int)strlen(input_ary); ++i)
 	{
 		if (islower(input_ary[i]) != 0)
+		{
 			printf("%c ", input_ary[i]);
+		}
 		lower_ary[10] = input_ary[i];
 	}
 
-	printf("\n");
+	printf("\n 대문자 출력");
 	// 대문자 구분
 	for (int i = 0; i < (int)strlen(input_ary); i++)
 	{

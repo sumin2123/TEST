@@ -20,7 +20,4 @@ int max_weight(Fitness** pary, int count); // 최대 체중 회원의 index 반환
 void print_info(Fitness** pary, int index); // 회원 정보 출력
 void free_ary(Fitness** pary, int count); // 동적 할당 영역 해제
 
-
-
-
 // 배열,사용자 정의 자료형, 포인터, 사용자함수, 메모리 동적 할당, 제어문, 표준 입출력 함수 사용 => 평가 목록
