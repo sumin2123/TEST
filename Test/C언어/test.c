@@ -43,7 +43,7 @@ int main(void) {
 		puts("");
 	}
 
-
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kookh1&logNo=120212992300
 	return 0;
 }
 
