@@ -9,6 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C언어", "C언어\C언어.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "자료구조 와 알고리즘 2", "자료구조 와 알고리즘 2\자료구조 와 알고리즘 2.vcxproj", "{0A2DDAFD-8C12-43CF-97E1-839E14AEE3AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0C4C52D-56A9-40D9-AC76-5C4757C5517A}"
+	ProjectSection(SolutionItems) = preProject
+		Test.txt = Test.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
