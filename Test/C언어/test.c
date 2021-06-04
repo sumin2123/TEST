@@ -13,24 +13,35 @@
 #include <string.h>
 #include <memory.h> //memcpy 함수를 사용하기 위함
 
+
 typedef struct Fitness{
-	int num;		//회원 수
+	int num;		//회원 번호
 	char name[20];	//이름을 저장할 변수
 	double weight;	// 몸무게를 저장할 변수
 
 } Fitness; //노드
 
 
-
 // 배열,사용자 정의 자료형, 포인터, 사용자함수, 메모리 동적 할당, 제어문, 표준 입출력 함수 사용 => 평가 목록
+
+
+void total_number(int count); // 1.전체 등록 회원 수 반환
+double average_weight(Fitness** pary, int count); // 2. 평균 체중 반환
+int max_weight(Fitness** pary, int count); // 3.최대 체중 회원의 index 반환
+void print_info(Fitness** pary, int index); // 4.회원 정보 출력
+void free_ary(Fitness** pary, int count); // 5.동적 할당 영역 해제
+
 
 
 int main(void) {
 	
 	Fitness* pary[100];	//포인터 배열 선언
 
-	// 회원 정보 입력받기
+	// 회원 정보 입력받기  >> 음수 입력 시 실행 종료
 	for (int i = 0; i < 100; i++) {
+		// 음수인지 아닌지 확인 >> 종료
+		
+		//else
 		pary[i] = (struct ary*)malloc(sizeof(struct Fitness));
 		printf("%d번째 회원 입력\n", i + 1);
 		pary[i]->num = i + 1;
@@ -41,30 +52,28 @@ int main(void) {
 		printf("몸무게를 입력하세요: ");
 		scanf("%.2f",pary[i]->weight);
 		puts("");
+
 	}
 
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kookh1&logNo=120212992300
 	return 0;
 }
 
 void print_info(Fitness** pary, int index) // 4.회원 정보 출력
 {
+	// 전역변수로 회원 전체 수를 따로 저장해서 쓴다. -> 연성이 언니 방법
+	// 배열의 번호를 입력 받아서 해당 배열의 정보만 출력한다.
+	// 회원번호 입력 받기
 
-	for (int i = 0; i < num; i++) {
-		printf("%d번째 회원 정보 출력 ~!\n", i+1,pary[i]->num);
-		
-	}
+	printf("회원 번호를 입력하세요: ");
+	scanf("%d", &index);
+	
+
+
+
+	//printf("%d번 회원 정보 출력 ~!\n", i + 1, pary[i]->num);
+
+	
 }
-
-
-
-
-
-void total_number(int count); // 1.전체 등록 회원 수 반환
-double average_weight(Fitness * *pary, int count); // 2. 평균 체중 반환
-int max_weight(Fitness * *pary, int count); // 3.최대 체중 회원의 index 반환
-void print_info(Fitness * *pary, int index); // 4.회원 정보 출력
-void free_ary(Fitness * *pary, int count); // 5.동적 할당 영역 해제
 
 
 // 전체 등록 회원 수 반환
@@ -74,35 +83,36 @@ void total_number(int count) {
 	
 }
 
-//// 평균 체중 반환
-//double average_weight(Fitness** pary, int count) {
-//	printf("<============ 회원들 평균 체중 수 ============>");
-//	int num; // 회원 무게 총합 저장할 변수
-//
-//}
-//
-////최대 체중 회원의 index 반환
-//int max_weight(Fitness** pary, int count) {
-//	printf("<============ 최대 체중 회원 ============>");
-//
-//	Fitness* ary = pary;
-//	// 노드 전체를 이동하면서 무게순으로 갱신한다.
-//
-//	while (NULL != ary) {
-//		if(
-//	}
-//}
-//
-//회원 정보 출력
-void print_info(Fitness** pary, int index) {
-	printf("<============ 회원 정보 출력 ============>");
-	for (ListNode* p = pary; p != NULL; p = p->next)
-	{
-		printf("회원번호: %d / 이름 : %s / 몸무게: %d\n",p->ary->mun, p->ary->name, p->ary->weight);
-	}
+// 평균 체중 반환
+double average_weight(Fitness** pary, int count) {
+	printf("<============ 회원들 평균 체중 수 ============>");	
+
+	int total; // 몸무게 총합
+	int averageWe; // 평균 체중 담을 변수
+
+	
+
+
 
 }
-//
+
+//최대 체중 회원의 index 반환 => 최댓값 찾는거 비교
+int max_weight(Fitness** pary, int count) {
+	printf("<============ 최대 체중 회원 ============>");
+	Fitness* ary = pary;
+	// 노드 전체를 이동하면서 무게순으로 갱신한다.
+
+	// 최대 체중 찾기 Start~!
+	int Max = 0;
+	for (int i=0;i<count;i++){
+		if (pary[i] > Max) {
+			Max = pary[i];
+		}
+		printf("%d번 회원 정보를 출력합니다.\n", i + 1, pary[i]->num);
+}
+
+
+
 //// 동적 할당 영역 해제
 //void free_ary(Fitness** pary, int count) {
 //	
