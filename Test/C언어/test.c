@@ -78,7 +78,7 @@ int main(void) {
 	return 0;
 }
 
-void insert_info(Fitness** pary) {
+void insert_info(Fitness** pary){
 	int i;
 	printf("음수를 입력하면 종료가 됩니다.\n");
 	printf("추가할 회원 번호를 입력하세요: ");
