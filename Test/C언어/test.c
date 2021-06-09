@@ -141,7 +141,7 @@ int max_weight(Fitness** pary, int count) {
 	}
 	printf("%d회원의 정보를 출력합니다.\n", Max_index); // Max_index가 회원 번호
 	printf("이름: %s\n", pary[Max_index]->name);			// Max_index번 회원의 이름 출력
-	printf("몸무게:%lf\n\n", &pary[Max_index]->weight);		// Max_index번 회원의 몸무게 출력
+	printf("몸무게:%lf\n\n", pary[Max_index]->weight);		// Max_index번 회원의 몸무게 출력
 
 	return Max_index; // 인덱스를 리턴
 }
@@ -196,12 +196,12 @@ int max_weight(Fitness** pary, int count) {
 					total_number(count);
 				}
 				else if (3 == k) {
-					double average;
+					double averageWe;
 					printf("\n<==== 평균 체중 확인 ====>\n");
 					// 평균 체중 확인하는 함수 호출
-					average = average_weight(pary, count);
+					averageWe = average_weight(pary, count);
 					//평균 값을 화면에 출력
-					printf("총 회원들의 평균 체중은 %g입니다.", average);
+					printf("총 회원들의 평균 체중은 %g입니다.", averageWe);
 				}
 				else if (4 == k) {
 					printf("\n<==== 최대 몸무게 회원 정보 출력 ====>\n");
